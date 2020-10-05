@@ -65,8 +65,13 @@ let tripler = multiplier(3); // tripler(4) => 12
 >**NB**: Any callback function passed into `.filter()` **MUST** evaluate to `true` for the result to be passed into the new array `.filter()` creates.
 
 ```javaScript
+var words = ['chair', 'music', 'pillow', 'brick', 'pen'];
 
+var shortWords = words.filter(word => word.length < 6;);
+
+console.log(shortWords);  // Output: ['chair','music','brick','pen']
 ```
+
 `.map()` - creates a new array with the result of executing the callback function on each element in the array on which it was called.
 
 ```javaScript
