@@ -114,3 +114,7 @@ console.log(eCount); // Output: 2
 console.log(aCount); // Output: 3
 console.log(lCount); // Output: 2
 ```
+#### Objects
+>**NB**: avoid using arrow functions when using `this` in a method
+
+method  - a function property in an object.
