@@ -53,9 +53,7 @@ These are functions that accept functions as a parameter or returns the value of
 >**NB**: The functions that are passed into a higher order function as parameters are also known as **callback functions** or **helper functions**.
 
 ```javaScript
-const multiplier = factor => {
-  return x => x * factor;
-}
+const multiplier = factor => x => x * factor;
 
 let doubler = multiplier(2); // doubler(3) => 6
 let tripler = multiplier(3); // tripler(4) => 12
