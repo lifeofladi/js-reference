@@ -59,8 +59,8 @@ let doubler = multiplier(2); // doubler(3) => 6
 let tripler = multiplier(3); // tripler(4) => 12
 ```
 #### Iteration Methods
-`.filter()` - creates a new array with all elements that pass the test implemented by the callback function.
->**NB**: Any callback function passed into `.filter()` **MUST** evaluate to `true` for the result to be passed into the new array `.filter()` creates.
+`filter()` - creates a new array with all elements that pass the test implemented by the callback function.
+>**NB**: Any callback function passed into `filter()` **MUST** evaluate to `true` for the result to be passed into the new array `filter()` creates.
 
 ```javaScript
 var words = ['chair', 'music', 'pillow', 'brick', 'pen'];
@@ -70,7 +70,7 @@ var shortWords = words.filter(word => word.length < 6;);
 console.log(shortWords);  // Output: ['chair','music','brick','pen']
 ```
 
-`.map()` - creates a new array with the result of executing the callback function on each element in the array on which it was called.
+`map()` - creates a new array with the result of executing the callback function on each element in the array on which it was called.
 
 ```javaScript
 let arr = [1,2,4,10];
@@ -80,7 +80,8 @@ var arrSquared = arr.map(digit => digit ** 2);
 console.log(arrSquared); // Output: [ 1, 4, 16, 100 ]
 ```
 
-`.reduce()` - Iterates through elements in an array and returns a single value. Can be used to add all digits in an array. Can also be used to fish out elements in an array, integer or string. Use case:
+`reduce()` - Iterates through elements in an array and returns a single value. Can be used to add all digits in an array. Can also be used to fish out elements in an array, integer or string. Use case:
+>**NB**: Calling `reduce()` on an empty array without an `initialValue` will throw a `TypeError`
 ###### Case 1
 add all digits in an array.
 
@@ -102,8 +103,23 @@ count occurrences of a string in an array.
 
 ```javaScript
 let arr = ['r','e','e','a','a','a','l','l','y'];
-const countOccurrences = (arr, char) => arr.reduce((acc, val)=>
-(val === char ? acc + 1 : acc), 0);
+
+//Long version
+const countOccurrences = (arr, char) => {
+  return arr.reduce((acc, val) => {
+    if(val === char) {
+      return acc + 1
+    }else {
+      return acc
+    }
+  }, 0);
+}
+
+//Short version
+const countOccurrences = (arr, char) => {
+  return arr.reduce((acc, val) => (val === char ? acc + 1 : acc), 0);
+}
+
 let eCount = countOccurrences(arr, 'e');
 let aCount = countOccurrences(arr, 'a');
 let lCount = countOccurrences(arr, 'l');
