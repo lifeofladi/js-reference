@@ -1,15 +1,15 @@
 //Space Complexity => 0(logn)
 //Time Complexity => 0(1)
 
-function recursiveBinarySearch(list, target) {
-  if (list.length === 0) return false;
+function recursiveBinarySearch(array, target) {
+  if (array.length === 0) return false;
   else {
-    var midPoint = Math.floor(list.length / 2);
-    if (list[midPoint] === target) return true;
+    var midPoint = Math.floor(array.length / 2);
+    if (array[midPoint] === target) return true;
     else {
-      if (list[midPoint] < target)
-        return recursiveBinarySearch(list.slice(midPoint + 1), target);
-      else return recursiveBinarySearch(list.slice(0, midPoint), target);
+      if (array[midPoint] < target)
+        return recursiveBinarySearch(array.slice(midPoint + 1), target);
+      else return recursiveBinarySearch(array.slice(0, midPoint), target);
     }
   }
 }
