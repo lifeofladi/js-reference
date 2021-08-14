@@ -44,10 +44,10 @@ function showPrime(limit) {
 //Creatiing Objects
 
 //Factory Functions
-function createCircle(radius) {
+function createCricle(radius) {
   return {
     radius,
-    draw() {
+    draw: function () {
       console.log("draw");
     },
   };
