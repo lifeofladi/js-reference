@@ -1,5 +1,5 @@
-//Space Complexity => 0(logn)
-//Time Complexity => 0(1)
+//Time Complexity => O(1)
+//Space Complexity => O(log n)
 
 function recursiveBinarySearch(array, target) {
   if (array.length === 0) return false;

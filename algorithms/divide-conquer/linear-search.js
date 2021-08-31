@@ -1,3 +1,6 @@
+//Time Complexity => O(n)
+//Space Complexity => O(1)
+
 function linearSearch(list, targetValue) {
   //returns  the index position of the target if found, else returns None
 
