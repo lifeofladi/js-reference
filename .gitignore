@@ -1,1 +1,8 @@
-*.DS_Store
+# system files
+.DS_Store
+
+# npm files
+node_modules/
+
+
+.env
